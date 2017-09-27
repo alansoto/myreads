@@ -1,5 +1,5 @@
 import React from 'react'
-import Book from './BookComponent'
+import Book from './Book'
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
 
