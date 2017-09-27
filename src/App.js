@@ -1,7 +1,8 @@
-import React from 'react'
-import Book from './Book'
-// import * as BooksAPI from './BooksAPI'
-import './App.css'
+import React from 'react';
+import Book from './Book/Book';
+// import * as BooksAPI from './BooksAPI';
+import './App.css';
+import * as BooksAPI from './BooksAPI';
 
 
 class BooksApp extends React.Component {
@@ -13,6 +14,12 @@ class BooksApp extends React.Component {
      * pages, as well as provide a good URL they can bookmark and share.
      */
     showSearchPage: false
+  }
+
+  componentDidMount(){
+    BooksAPI.getAll().then((books)=>{
+      this.setState({books});
+    })
   }
 
   render() {
@@ -51,7 +58,7 @@ class BooksApp extends React.Component {
                   <div className="bookshelf-books">
                     <ol className="books-grid">
                       <Book />
-                      
+
                     </ol>
                   </div>
                 </div>
