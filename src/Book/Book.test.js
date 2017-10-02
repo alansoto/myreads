@@ -16,12 +16,11 @@ import Book from './Book';
 Enzyme.configure({adapter: new Adapter()});
 
 it('renders without crashing', () => {
-  const wrapper = shallow(<Book />);
+  const wrapper = shallow(<Book/>);
   expect(wrapper).toMatchSnapshot();
 });
 
-it('has an image property',()=>{
-  const wrapper = shallow(<Book bookCover='http'/>)
-  
-  expect(wrapper.prop('bookCover')).toContain('http');
+it('has a book cover coming from props',()=>{
+  const wrapper = shallow(<Book backgroundCover='http'/>)
+  expect(wrapper.find('.book-cover').get(0).props.style.backgroundImage).toBe('url(http)')
 })
