@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import * as BooksAPI from './BooksAPI';
-import Bookshelf from './bookshelf/Bookshelf';
+import Bookshelf from './Bookshelf/Bookshelf';
 
 
 class BooksApp extends React.Component {
