@@ -29,3 +29,8 @@ it('renders bookTitle coming from props',()=>{
   const wrapper = shallow(<Book bookTitle='Hamlet'/>)
   expect(wrapper.find('.book-title').text()).toBe('Hamlet')
 })
+
+it('renders bookAuthors coming from props',()=>{
+  const wrapper = shallow(<Book bookAuthors='Shakespeare'/>)
+  expect(wrapper.find('.book-authors').text()).toBe('Shakespeare')
+})
