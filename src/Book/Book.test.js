@@ -20,7 +20,7 @@ it('renders without crashing', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('has a book cover coming from props',()=>{
+it('renders backgroundCover coming from props',()=>{
   const wrapper = shallow(<Book backgroundCover='http'/>)
   expect(wrapper.find('.book-cover').get(0).props.style.backgroundImage).toBe('url(http)')
 })
