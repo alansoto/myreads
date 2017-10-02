@@ -5,11 +5,12 @@ class Book extends Component {
   static propTypes = {
       backgroundCover: PropTypes.string,
       bookTitle: PropTypes.string,
-      bookAuthors: PropTypes.string
+      bookAuthors: PropTypes.string,
+      bookshelf: PropTypes.string
   }
 
   render(){
-    const {backgroundCover, bookTitle, bookAuthors} = this.props;
+    const {backgroundCover, bookTitle, bookAuthors, bookshelf} = this.props;
 
     return (
       <li>
@@ -17,7 +18,7 @@ class Book extends Component {
           <div className="book-top">
             <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${backgroundCover})` }}></div>
             <div className="book-shelf-changer">
-              <select>
+              <select value={bookshelf}>
                 <option value="none" disabled>Move to...</option>
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>
