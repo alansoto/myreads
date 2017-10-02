@@ -30,7 +30,8 @@ ShallowWrapper {
                         } />
                 <div
                         className="book-shelf-changer">
-                        <select>
+                        <select
+                                value={undefined}>
                                 <option
                                         disabled={true}
                                         value="none">
@@ -81,7 +82,8 @@ ShallowWrapper {
                         } />
             <div
                         className="book-shelf-changer">
-                        <select>
+                        <select
+                                    value={undefined}>
                                     <option
                                                 disabled={true}
                                                 value="none">
@@ -132,7 +134,8 @@ ShallowWrapper {
                 } />,
               <div
                 className="book-shelf-changer">
-                <select>
+                <select
+                                value={undefined}>
                                 <option
                                                 disabled={true}
                                                 value="none">
@@ -182,7 +185,8 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": <select>
+                "children": <select
+                  value={undefined}>
                   <option
                                     disabled={true}
                                     value="none">
@@ -236,6 +240,7 @@ ShallowWrapper {
                       None
 </option>,
                   ],
+                  "value": undefined,
                 },
                 "ref": null,
                 "rendered": Array [
@@ -358,7 +363,8 @@ ShallowWrapper {
                               } />
                     <div
                               className="book-shelf-changer">
-                              <select>
+                              <select
+                                        value={undefined}>
                                         <option
                                                   disabled={true}
                                                   value="none">
@@ -409,7 +415,8 @@ ShallowWrapper {
                             } />
               <div
                             className="book-shelf-changer">
-                            <select>
+                            <select
+                                          value={undefined}>
                                           <option
                                                         disabled={true}
                                                         value="none">
@@ -460,7 +467,8 @@ ShallowWrapper {
                   } />,
                 <div
                   className="book-shelf-changer">
-                  <select>
+                  <select
+                                    value={undefined}>
                                     <option
                                                       disabled={true}
                                                       value="none">
@@ -510,7 +518,8 @@ ShallowWrapper {
                 "key": null,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <select>
+                  "children": <select
+                    value={undefined}>
                     <option
                                         disabled={true}
                                         value="none">
@@ -564,6 +573,7 @@ ShallowWrapper {
                         None
 </option>,
                     ],
+                    "value": undefined,
                   },
                   "ref": null,
                   "rendered": Array [
