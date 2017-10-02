@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 class Book extends Component {
   static propTypes = {
       backgroundCover: PropTypes.string,
-      bookTitle: PropTypes.string
+      bookTitle: PropTypes.string,
+      bookAuthors: PropTypes.string
   }
 
   render(){
-    const {backgroundCover, bookTitle} = this.props;
+    const {backgroundCover, bookTitle, bookAuthors} = this.props;
 
     return (
       <li>
@@ -26,7 +27,7 @@ class Book extends Component {
             </div>
           </div>
           <div className="book-title">{bookTitle}</div>
-          <div className="book-authors">Harper Lee</div>
+          <div className="book-authors">{bookAuthors}</div>
       	</div>
       </li>
     );
