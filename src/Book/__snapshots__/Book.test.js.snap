@@ -56,9 +56,7 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="book-title">
-                Alans Book
-        </div>
+                className="book-title" />
         <div
                 className="book-authors">
                 Harper Lee
@@ -111,9 +109,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="book-title">
-            Alans Book
-</div>,
+            className="book-title" />,
           <div
             className="book-authors">
             Harper Lee
@@ -321,11 +317,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Alans Book",
+            "children": undefined,
             "className": "book-title",
           },
           "ref": null,
-          "rendered": "Alans Book",
+          "rendered": null,
           "type": "div",
         },
         Object {
@@ -392,9 +388,7 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="book-title">
-                    Alans Book
-          </div>
+                    className="book-title" />
           <div
                     className="book-authors">
                     Harper Lee
@@ -447,9 +441,7 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="book-title">
-              Alans Book
-</div>,
+              className="book-title" />,
             <div
               className="book-authors">
               Harper Lee
@@ -657,11 +649,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "Alans Book",
+              "children": undefined,
               "className": "book-title",
             },
             "ref": null,
-            "rendered": "Alans Book",
+            "rendered": null,
             "type": "div",
           },
           Object {

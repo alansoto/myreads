@@ -24,3 +24,8 @@ it('renders backgroundCover coming from props',()=>{
   const wrapper = shallow(<Book backgroundCover='http'/>)
   expect(wrapper.find('.book-cover').get(0).props.style.backgroundImage).toBe('url(http)')
 })
+
+it('renders bookTitle coming from props',()=>{
+  const wrapper = shallow(<Book bookTitle='Hamlet'/>)
+  expect(wrapper.find('.book-title').text()).toBe('Hamlet')
+})
