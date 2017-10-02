@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 
 class Book extends Component {
   static propTypes = {
-      backgroundCover: PropTypes.string
+      backgroundCover: PropTypes.string,
+      bookTitle: PropTypes.string
   }
 
   render(){
-    const {backgroundCover} = this.props;
+    const {backgroundCover, bookTitle} = this.props;
 
     return (
       <li>
@@ -24,7 +25,7 @@ class Book extends Component {
               </select>
             </div>
           </div>
-          <div className="book-title">Alans Book</div>
+          <div className="book-title">{bookTitle}</div>
           <div className="book-authors">Harper Lee</div>
       	</div>
       </li>
