@@ -10,4 +10,9 @@ describe('Bookshelf component',()=>{
     const wrapper = shallow(<Bookshelf/>);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('renders bookshelfTitle from props',()=>{
+    const wrapper = shallow(<Bookshelf bookshelfTitle='My title'/>);
+    expect(wrapper.find('.bookshelf-title').text()).toBe('My title');
+  });
 });
