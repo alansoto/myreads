@@ -5,7 +5,9 @@ import Bookshelf from './Bookshelf';
 
 Enzyme.configure({adapter: new Adapter()});
 
-it('renders without crashing', () => {
-  const wrapper = shallow(<Bookshelf/>);
-  expect(wrapper).toMatchSnapshot();
+describe('Bookshelf component',()=>{
+  it('renders without crashing', () => {
+    const wrapper = shallow(<Bookshelf/>);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
