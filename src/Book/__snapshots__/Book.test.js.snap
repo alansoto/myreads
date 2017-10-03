@@ -1,4 +1,4 @@
-exports[`test renders without crashing 1`] = `
+exports[`Book Component renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
