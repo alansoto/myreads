@@ -18,9 +18,7 @@ ShallowWrapper {
       "children": <div
         className="bookshelf">
         <h2
-                className="bookshelf-title">
-                Currently Reading
-        </h2>
+                className="bookshelf-title" />
         <div
                 className="bookshelf-books">
                 <ol
@@ -40,9 +38,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="bookshelf-title">
-            Currently Reading
-</h2>,
+            className="bookshelf-title" />,
           <div
             className="bookshelf-books">
             <ol
@@ -62,11 +58,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Currently Reading",
+            "children": undefined,
             "className": "bookshelf-title",
           },
           "ref": null,
-          "rendered": "Currently Reading",
+          "rendered": null,
           "type": "h2",
         },
         Object {
@@ -143,9 +139,7 @@ ShallowWrapper {
         "children": <div
           className="bookshelf">
           <h2
-                    className="bookshelf-title">
-                    Currently Reading
-          </h2>
+                    className="bookshelf-title" />
           <div
                     className="bookshelf-books">
                     <ol
@@ -165,9 +159,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h2
-              className="bookshelf-title">
-              Currently Reading
-</h2>,
+              className="bookshelf-title" />,
             <div
               className="bookshelf-books">
               <ol
@@ -187,11 +179,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "Currently Reading",
+              "children": undefined,
               "className": "bookshelf-title",
             },
             "ref": null,
-            "rendered": "Currently Reading",
+            "rendered": null,
             "type": "h2",
           },
           Object {
