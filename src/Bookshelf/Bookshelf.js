@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 
 class Bookshelf extends Component {
   static propTypes = {
-    bookshelfTitle: PropTypes.string
+    bookshelfTitle: PropTypes.string,
+    books: PropTypes.array
   }
 
   render() {
-    const {bookshelfTitle} = this.props;
+    const {bookshelfTitle, books} = this.props;
+
+
 
     return (
       <div>
@@ -16,9 +19,9 @@ class Bookshelf extends Component {
           <h2 className="bookshelf-title">{bookshelfTitle}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
-              <Book/>
-              <Book/>
-              <Book/>
+              
+                <Book bookTitle={book.title}/>
+
 
             </ol>
           </div>

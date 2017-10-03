@@ -18,7 +18,6 @@ class BooksApp extends React.Component {
   componentDidMount(){
      BooksAPI.getAll().then((books)=>{
        this.setState({books});
-       console.log(this.state.books);
     })
   }
 
@@ -52,7 +51,9 @@ class BooksApp extends React.Component {
               <h1>MyReads</h1>
             </div>
             <div className="list-books-content">
-              <Bookshelf/>
+              <Bookshelf bookshelfTitle="Currently Reading" books={this.state.books && this.state.books.filter((book)=> book.shelf === 'currentlyReading')}/>
+              <Bookshelf bookshelfTitle="Want to Read"/>
+              <Bookshelf bookshelfTitle="Read"/>
             </div>
             <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
@@ -62,6 +63,8 @@ class BooksApp extends React.Component {
       </div>
     )
   }
+
+
 }
 
 export default BooksApp
