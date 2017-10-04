@@ -1,0 +1,18 @@
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/workspace/src/Bookshelf/Bookshelf.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme'); /* istanbul ignore next */var _enzyme2 = _interopRequireDefault(_enzyme);
+var /* istanbul ignore next */_enzymeAdapterReact = require('enzyme-adapter-react-16'); /* istanbul ignore next */var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+var /* istanbul ignore next */_Bookshelf = require('./Bookshelf'); /* istanbul ignore next */var _Bookshelf2 = _interopRequireDefault(_Bookshelf);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+/* istanbul ignore next */_enzyme2.default.configure({ adapter: new /* istanbul ignore next */_enzymeAdapterReact2.default() });
+
+describe('Bookshelf component', () => {
+  it('renders without crashing', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Bookshelf2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined }));
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders bookshelfTitle from props', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Bookshelf2.default, /* istanbul ignore next */{ bookshelfTitle: 'My title', __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined }));
+    expect(wrapper.find('.bookshelf-title').text()).toBe('My title');
+  });
+});

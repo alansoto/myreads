@@ -22,11 +22,7 @@ ShallowWrapper {
         <div
                 className="bookshelf-books">
                 <ol
-                        className="books-grid">
-                        <Book />
-                        <Book />
-                        <Book />
-                </ol>
+                        className="books-grid" />
         </div>
 </div>,
     },
@@ -42,11 +38,7 @@ ShallowWrapper {
           <div
             className="bookshelf-books">
             <ol
-                        className="books-grid">
-                        <Book />
-                        <Book />
-                        <Book />
-            </ol>
+                        className="books-grid" />
 </div>,
         ],
         "className": "bookshelf",
@@ -71,11 +63,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <ol
-              className="books-grid">
-              <Book />
-              <Book />
-              <Book />
-</ol>,
+              className="books-grid" />,
             "className": "bookshelf-books",
           },
           "ref": null,
@@ -84,43 +72,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <Book />,
-                <Book />,
-                <Book />,
-              ],
+              "children": undefined,
               "className": "books-grid",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
+            "rendered": null,
             "type": "ol",
           },
           "type": "div",
@@ -143,11 +99,7 @@ ShallowWrapper {
           <div
                     className="bookshelf-books">
                     <ol
-                              className="books-grid">
-                              <Book />
-                              <Book />
-                              <Book />
-                    </ol>
+                              className="books-grid" />
           </div>
 </div>,
       },
@@ -163,11 +115,7 @@ ShallowWrapper {
             <div
               className="bookshelf-books">
               <ol
-                            className="books-grid">
-                            <Book />
-                            <Book />
-                            <Book />
-              </ol>
+                            className="books-grid" />
 </div>,
           ],
           "className": "bookshelf",
@@ -192,11 +140,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <ol
-                className="books-grid">
-                <Book />
-                <Book />
-                <Book />
-</ol>,
+                className="books-grid" />,
               "className": "bookshelf-books",
             },
             "ref": null,
@@ -205,43 +149,11 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <Book />,
-                  <Book />,
-                  <Book />,
-                ],
+                "children": undefined,
                 "className": "books-grid",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "class",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "class",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "class",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
+              "rendered": null,
               "type": "ol",
             },
             "type": "div",

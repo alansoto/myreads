@@ -1,0 +1,34 @@
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/workspace/src/Book/Book.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme'); /* istanbul ignore next */var _enzyme2 = _interopRequireDefault(_enzyme);
+var /* istanbul ignore next */_enzymeAdapterReact = require('enzyme-adapter-react-16'); /* istanbul ignore next */var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+var /* istanbul ignore next */_Book = require('./Book'); /* istanbul ignore next */var _Book2 = _interopRequireDefault(_Book);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+/* istanbul ignore next */_enzyme2.default.configure({ adapter: new /* istanbul ignore next */_enzymeAdapterReact2.default() });
+
+describe('Book Component', () => {
+  it('renders without crashing', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Book2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined }));
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders backgroundCover coming from props', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Book2.default, /* istanbul ignore next */{ backgroundCover: 'http', __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined }));
+    expect(wrapper.find('.book-cover').get(0).props.style.backgroundImage).toBe('url(http)');
+  });
+
+  it('renders bookTitle coming from props', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Book2.default, /* istanbul ignore next */{ bookTitle: 'Hamlet', __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: undefined }));
+    expect(wrapper.find('.book-title').text()).toBe('Hamlet');
+  });
+
+  it('renders bookAuthors coming from props', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Book2.default, /* istanbul ignore next */{ bookAuthors: 'Shakespeare', __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: undefined }));
+    expect(wrapper.find('.book-authors').text()).toBe('Shakespeare');
+  });
+
+  it('renders currentBookshelf coming from props', () => {
+    const wrapper = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Book2.default, /* istanbul ignore next */{ bookshelf: 'test-bookshelf', __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: undefined }));
+    expect(wrapper.find('.book-shelf-changer select').get(0).props.value).toBe('test-bookshelf');
+  });
+
+});
