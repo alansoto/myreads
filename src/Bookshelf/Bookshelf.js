@@ -18,7 +18,7 @@ class Bookshelf extends Component {
           <div className="bookshelf-books">
             <ol className="books-grid">
               { books && books.map( (book)=>(
-                <Book bookTitle={book.title} backgroundCover={book.imageLinks.smallThumbnail}  bookAuthors={book.authors[0]} bookshelf={book.shelf} />
+                <Book bookTitle={book.title} backgroundCover={book.imageLinks.smallThumbnail}  bookAuthors={book.authors.join(', ')} bookshelf={book.shelf} />
               ))}
             </ol>
           </div>
