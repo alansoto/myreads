@@ -22,6 +22,10 @@ class BooksApp extends React.Component {
   }
 
   render() {
+    const emptyBook= {id:'000',title:'Loading...', imageLinks:{smallThumbnail:''},authors:['...']};
+    const getBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
+
+
     return (
       <div className="app">
         {this.state.showSearchPage ? (
@@ -50,11 +54,19 @@ class BooksApp extends React.Component {
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
-            <div className="list-books-content">
-              <Bookshelf bookshelfTitle="Currently Reading" books={this.state.books && this.state.books.filter((book)=> book.shelf === 'currentlyReading')}/>
-              <Bookshelf bookshelfTitle="Want to Read"/>
-              <Bookshelf bookshelfTitle="Read"/>
-            </div>
+            {
+              this.state.books ?
+                (
+                  <div className="list-books-content">
+                    <Bookshelf bookshelfTitle="Currently Reading" books={getBooks('currentlyReading')}/>
+                    <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')}/>
+                    <Bookshelf bookshelfTitle="Read" books={getBooks('read')}/>
+                  </div>
+                ):(
+                  <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]}/>
+                )
+            }
+
             <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
