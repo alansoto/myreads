@@ -5,12 +5,13 @@ class Book extends Component {
   static propTypes = {
       backgroundCover: PropTypes.string,
       bookTitle: PropTypes.string,
-      bookAuthors: PropTypes.string,
+      bookAuthors: PropTypes.array,
       bookshelf: PropTypes.string
   }
 
   render(){
     const {backgroundCover, bookTitle, bookAuthors, bookshelf} = this.props;
+    const authors = bookAuthors ? bookAuthors.join(', ') : '';
 
     return (
       <li>
@@ -28,7 +29,7 @@ class Book extends Component {
             </div>
           </div>
           <div className="book-title">{bookTitle}</div>
-          <div className="book-authors">{bookAuthors}</div>
+          <div className="book-authors">{authors}</div>
       	</div>
       </li>
     );

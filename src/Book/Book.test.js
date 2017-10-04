@@ -22,8 +22,8 @@ describe('Book Component',()=>{
   })
 
   it('renders bookAuthors coming from props',()=>{
-    const wrapper = shallow(<Book bookAuthors='Shakespeare'/>)
-    expect(wrapper.find('.book-authors').text()).toBe('Shakespeare')
+    const wrapper = shallow(<Book bookAuthors={['Shakespeare','Someone Else']}/>)
+    expect(wrapper.find('.book-authors').text()).toBe('Shakespeare, Someone Else')
   })
 
   it('renders currentBookshelf coming from props',()=>{
