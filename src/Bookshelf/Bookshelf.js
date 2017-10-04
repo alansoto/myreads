@@ -17,9 +17,9 @@ class Bookshelf extends Component {
           <h2 className="bookshelf-title">{bookshelfTitle}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
-             { books && books.map( (book)=>(
-      				<Book bookTitle={book.title} backgroundCover={book.imageLinks.smallThumbnail}  bookAuthors={book.authors[0]} bookshelf={book.shelf} />
-             ))}         
+              { books && books.map( (book)=>(
+                <Book bookTitle={book.title} backgroundCover={book.imageLinks.smallThumbnail}  bookAuthors={book.authors[0]} bookshelf={book.shelf} />
+              ))}
             </ol>
           </div>
         </div>
