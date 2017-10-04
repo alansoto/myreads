@@ -3,23 +3,26 @@ import PropTypes from 'prop-types'
 
 class Book extends Component {
   static propTypes = {
-      backgroundCover: PropTypes.string,
-      bookTitle: PropTypes.string,
-      bookAuthors: PropTypes.array,
-      bookshelf: PropTypes.string
+      book: PropTypes.object
+
   }
 
   render(){
-    const {backgroundCover, bookTitle, bookAuthors, bookshelf} = this.props;
-    const authors = bookAuthors ? bookAuthors.join(', ') : '';
+    const book = this.props.book;
+    const smallThumbnail = book.imageLinks.smallThumbnail;
+    const title = book.title;
+    const authors = book.authors ? book.authors.join(', ') : '';
+    const shelf = book.shelf;
+
+
 
     return (
       <li>
         <div className="book">
           <div className="book-top">
-            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${backgroundCover})` }}></div>
+            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${smallThumbnail})` }}></div>
             <div className="book-shelf-changer">
-              <select value={bookshelf}>
+              <select value={shelf}>
                 <option value="none" disabled>Move to...</option>
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>
@@ -28,7 +31,7 @@ class Book extends Component {
               </select>
             </div>
           </div>
-          <div className="book-title">{bookTitle}</div>
+          <div className="book-title">{title}</div>
           <div className="book-authors">{authors}</div>
       	</div>
       </li>

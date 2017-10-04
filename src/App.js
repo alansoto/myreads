@@ -22,7 +22,7 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    const emptyBook= {id:'000',title:'Loading...', imageLinks:{smallThumbnail:''},authors:['...']};
+    const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
     const getBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
 
 

@@ -2,7 +2,20 @@ exports[`Book Component renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Book />,
+  Symbol(enzyme.__unrendered__): <Book
+    book={
+        Object {
+            "authors": Array [
+              "Shakespeare",
+              "Someone Else",
+            ],
+            "imageLinks": Object {
+              "smallThumbnail": "http",
+            },
+            "shelf": "myShelf",
+            "title": "Hamlet",
+          }
+    } />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,7 +36,7 @@ ShallowWrapper {
                         className="book-cover"
                         style={
                                 Object {
-                                        "backgroundImage": "url(undefined)",
+                                        "backgroundImage": "url(http)",
                                         "height": 193,
                                         "width": 128,
                                       }
@@ -31,7 +44,7 @@ ShallowWrapper {
                 <div
                         className="book-shelf-changer">
                         <select
-                                value={undefined}>
+                                value="myShelf">
                                 <option
                                         disabled={true}
                                         value="none">
@@ -57,9 +70,13 @@ ShallowWrapper {
                 </div>
         </div>
         <div
-                className="book-title" />
+                className="book-title">
+                Hamlet
+        </div>
         <div
-                className="book-authors" />
+                className="book-authors">
+                Shakespeare, Someone Else
+        </div>
 </div>,
     },
     "ref": null,
@@ -75,7 +92,7 @@ ShallowWrapper {
                         className="book-cover"
                         style={
                                     Object {
-                                                "backgroundImage": "url(undefined)",
+                                                "backgroundImage": "url(http)",
                                                 "height": 193,
                                                 "width": 128,
                                               }
@@ -83,7 +100,7 @@ ShallowWrapper {
             <div
                         className="book-shelf-changer">
                         <select
-                                    value={undefined}>
+                                    value="myShelf">
                                     <option
                                                 disabled={true}
                                                 value="none">
@@ -109,9 +126,13 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="book-title" />,
+            className="book-title">
+            Hamlet
+</div>,
           <div
-            className="book-authors" />,
+            className="book-authors">
+            Shakespeare, Someone Else
+</div>,
         ],
         "className": "book",
       },
@@ -127,7 +148,7 @@ ShallowWrapper {
                 className="book-cover"
                 style={
                                 Object {
-                                                "backgroundImage": "url(undefined)",
+                                                "backgroundImage": "url(http)",
                                                 "height": 193,
                                                 "width": 128,
                                               }
@@ -135,7 +156,7 @@ ShallowWrapper {
               <div
                 className="book-shelf-changer">
                 <select
-                                value={undefined}>
+                                value="myShelf">
                                 <option
                                                 disabled={true}
                                                 value="none">
@@ -171,7 +192,7 @@ ShallowWrapper {
               "props": Object {
                 "className": "book-cover",
                 "style": Object {
-                  "backgroundImage": "url(undefined)",
+                  "backgroundImage": "url(http)",
                   "height": 193,
                   "width": 128,
                 },
@@ -186,7 +207,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <select
-                  value={undefined}>
+                  value="myShelf">
                   <option
                                     disabled={true}
                                     value="none">
@@ -240,7 +261,7 @@ ShallowWrapper {
                       None
 </option>,
                   ],
-                  "value": undefined,
+                  "value": "myShelf",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -318,11 +339,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Hamlet",
             "className": "book-title",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Hamlet",
           "type": "div",
         },
         Object {
@@ -330,11 +351,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "",
+            "children": "Shakespeare, Someone Else",
             "className": "book-authors",
           },
           "ref": null,
-          "rendered": "",
+          "rendered": "Shakespeare, Someone Else",
           "type": "div",
         },
       ],
@@ -356,7 +377,7 @@ ShallowWrapper {
                               className="book-cover"
                               style={
                                         Object {
-                                                  "backgroundImage": "url(undefined)",
+                                                  "backgroundImage": "url(http)",
                                                   "height": 193,
                                                   "width": 128,
                                                 }
@@ -364,7 +385,7 @@ ShallowWrapper {
                     <div
                               className="book-shelf-changer">
                               <select
-                                        value={undefined}>
+                                        value="myShelf">
                                         <option
                                                   disabled={true}
                                                   value="none">
@@ -390,9 +411,13 @@ ShallowWrapper {
                     </div>
           </div>
           <div
-                    className="book-title" />
+                    className="book-title">
+                    Hamlet
+          </div>
           <div
-                    className="book-authors" />
+                    className="book-authors">
+                    Shakespeare, Someone Else
+          </div>
 </div>,
       },
       "ref": null,
@@ -408,7 +433,7 @@ ShallowWrapper {
                             className="book-cover"
                             style={
                                           Object {
-                                                        "backgroundImage": "url(undefined)",
+                                                        "backgroundImage": "url(http)",
                                                         "height": 193,
                                                         "width": 128,
                                                       }
@@ -416,7 +441,7 @@ ShallowWrapper {
               <div
                             className="book-shelf-changer">
                             <select
-                                          value={undefined}>
+                                          value="myShelf">
                                           <option
                                                         disabled={true}
                                                         value="none">
@@ -442,9 +467,13 @@ ShallowWrapper {
               </div>
 </div>,
             <div
-              className="book-title" />,
+              className="book-title">
+              Hamlet
+</div>,
             <div
-              className="book-authors" />,
+              className="book-authors">
+              Shakespeare, Someone Else
+</div>,
           ],
           "className": "book",
         },
@@ -460,7 +489,7 @@ ShallowWrapper {
                   className="book-cover"
                   style={
                                     Object {
-                                                      "backgroundImage": "url(undefined)",
+                                                      "backgroundImage": "url(http)",
                                                       "height": 193,
                                                       "width": 128,
                                                     }
@@ -468,7 +497,7 @@ ShallowWrapper {
                 <div
                   className="book-shelf-changer">
                   <select
-                                    value={undefined}>
+                                    value="myShelf">
                                     <option
                                                       disabled={true}
                                                       value="none">
@@ -504,7 +533,7 @@ ShallowWrapper {
                 "props": Object {
                   "className": "book-cover",
                   "style": Object {
-                    "backgroundImage": "url(undefined)",
+                    "backgroundImage": "url(http)",
                     "height": 193,
                     "width": 128,
                   },
@@ -519,7 +548,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <select
-                    value={undefined}>
+                    value="myShelf">
                     <option
                                         disabled={true}
                                         value="none">
@@ -573,7 +602,7 @@ ShallowWrapper {
                         None
 </option>,
                     ],
-                    "value": undefined,
+                    "value": "myShelf",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -651,11 +680,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "Hamlet",
               "className": "book-title",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "Hamlet",
             "type": "div",
           },
           Object {
@@ -663,11 +692,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": "",
+              "children": "Shakespeare, Someone Else",
               "className": "book-authors",
             },
             "ref": null,
-            "rendered": "",
+            "rendered": "Shakespeare, Someone Else",
             "type": "div",
           },
         ],
