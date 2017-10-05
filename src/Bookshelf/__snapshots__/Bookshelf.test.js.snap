@@ -2,7 +2,9 @@ exports[`Bookshelf component renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Bookshelf />,
+  Symbol(enzyme.__unrendered__): <Bookshelf
+    bookshelfTitle="My title"
+    updateBook={[Function]} />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +20,9 @@ ShallowWrapper {
       "children": <div
         className="bookshelf">
         <h2
-                className="bookshelf-title" />
+                className="bookshelf-title">
+                My title
+        </h2>
         <div
                 className="bookshelf-books">
                 <ol
@@ -34,7 +38,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="bookshelf-title" />,
+            className="bookshelf-title">
+            My title
+</h2>,
           <div
             className="bookshelf-books">
             <ol
@@ -50,11 +56,11 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "My title",
             "className": "bookshelf-title",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "My title",
           "type": "h2",
         },
         Object {
@@ -95,7 +101,9 @@ ShallowWrapper {
         "children": <div
           className="bookshelf">
           <h2
-                    className="bookshelf-title" />
+                    className="bookshelf-title">
+                    My title
+          </h2>
           <div
                     className="bookshelf-books">
                     <ol
@@ -111,7 +119,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h2
-              className="bookshelf-title" />,
+              className="bookshelf-title">
+              My title
+</h2>,
             <div
               className="bookshelf-books">
               <ol
@@ -127,11 +137,11 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "My title",
               "className": "bookshelf-title",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "My title",
             "type": "h2",
           },
           Object {

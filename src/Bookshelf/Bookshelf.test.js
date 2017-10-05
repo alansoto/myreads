@@ -5,14 +5,17 @@ import Bookshelf from './Bookshelf';
 
 Enzyme.configure({adapter: new Adapter()});
 
+const updateBook = ()=>{console.log('hello')}
+const testBookshelf = <Bookshelf bookshelfTitle='My title' updateBook={updateBook}/>
+
 describe('Bookshelf component',()=>{
   it('renders without crashing', () => {
-    const wrapper = shallow(<Bookshelf/>);
+    const wrapper = shallow(testBookshelf);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders bookshelfTitle from props',()=>{
-    const wrapper = shallow(<Bookshelf bookshelfTitle='My title'/>);
+    const wrapper = shallow(testBookshelf);
     expect(wrapper.find('.bookshelf-title').text()).toBe('My title');
   });
 });

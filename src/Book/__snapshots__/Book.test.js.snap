@@ -15,7 +15,8 @@ ShallowWrapper {
             "shelf": "myShelf",
             "title": "Hamlet",
           }
-    } />,
+    }
+    updateBook={[Function]} />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -44,7 +45,8 @@ ShallowWrapper {
                 <div
                         className="book-shelf-changer">
                         <select
-                                value="myShelf">
+                                defaultValue="myShelf"
+                                onChange={[Function]}>
                                 <option
                                         disabled={true}
                                         value="none">
@@ -100,7 +102,8 @@ ShallowWrapper {
             <div
                         className="book-shelf-changer">
                         <select
-                                    value="myShelf">
+                                    defaultValue="myShelf"
+                                    onChange={[Function]}>
                                     <option
                                                 disabled={true}
                                                 value="none">
@@ -156,7 +159,8 @@ ShallowWrapper {
               <div
                 className="book-shelf-changer">
                 <select
-                                value="myShelf">
+                                defaultValue="myShelf"
+                                onChange={[Function]}>
                                 <option
                                                 disabled={true}
                                                 value="none">
@@ -207,7 +211,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <select
-                  value="myShelf">
+                  defaultValue="myShelf"
+                  onChange={[Function]}>
                   <option
                                     disabled={true}
                                     value="none">
@@ -261,7 +266,8 @@ ShallowWrapper {
                       None
 </option>,
                   ],
-                  "value": "myShelf",
+                  "defaultValue": "myShelf",
+                  "onChange": [Function],
                 },
                 "ref": null,
                 "rendered": Array [
@@ -385,7 +391,8 @@ ShallowWrapper {
                     <div
                               className="book-shelf-changer">
                               <select
-                                        value="myShelf">
+                                        defaultValue="myShelf"
+                                        onChange={[Function]}>
                                         <option
                                                   disabled={true}
                                                   value="none">
@@ -441,7 +448,8 @@ ShallowWrapper {
               <div
                             className="book-shelf-changer">
                             <select
-                                          value="myShelf">
+                                          defaultValue="myShelf"
+                                          onChange={[Function]}>
                                           <option
                                                         disabled={true}
                                                         value="none">
@@ -497,7 +505,8 @@ ShallowWrapper {
                 <div
                   className="book-shelf-changer">
                   <select
-                                    value="myShelf">
+                                    defaultValue="myShelf"
+                                    onChange={[Function]}>
                                     <option
                                                       disabled={true}
                                                       value="none">
@@ -548,7 +557,8 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <select
-                    value="myShelf">
+                    defaultValue="myShelf"
+                    onChange={[Function]}>
                     <option
                                         disabled={true}
                                         value="none">
@@ -602,7 +612,8 @@ ShallowWrapper {
                         None
 </option>,
                     ],
-                    "value": "myShelf",
+                    "defaultValue": "myShelf",
+                    "onChange": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
