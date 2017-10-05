@@ -21,6 +21,10 @@ class BooksApp extends React.Component {
     })
   }
 
+  updateBook(book, shelf){
+    console.log('updateBook', book, shelf)
+  }
+
   render() {
     const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
     const getBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
@@ -58,12 +62,12 @@ class BooksApp extends React.Component {
               this.state.books ?
                 (
                   <div className="list-books-content">
-                    <Bookshelf bookshelfTitle="Currently Reading" books={getBooks('currentlyReading')}/>
-                    <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')}/>
-                    <Bookshelf bookshelfTitle="Read" books={getBooks('read')}/>
+                    <Bookshelf bookshelfTitle="Currently Reading" books={getBooks('currentlyReading')} updateBook={this.updateBook}/>
+                    {/* <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')}/>
+                    <Bookshelf bookshelfTitle="Read" books={getBooks('read')}/> */}
                   </div>
                 ):(
-                  <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]}/>
+                  <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]} updateBook={this.updateBook}/>
                 )
             }
 

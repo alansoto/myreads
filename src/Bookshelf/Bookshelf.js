@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 class Bookshelf extends Component {
   static propTypes = {
     bookshelfTitle: PropTypes.string,
-    books: PropTypes.array
+    books: PropTypes.array,
+    updateBook: PropTypes.func.isRequired
   }
 
   render() {
-    const {bookshelfTitle, books} = this.props;
+    const {bookshelfTitle, books,updateBook} = this.props;
 
     return (
       <div>
@@ -18,7 +19,7 @@ class Bookshelf extends Component {
           <div className="bookshelf-books">
             <ol className="books-grid">
               { books && books.map( (book)=>(
-                <Book book={book} key={book.id} />
+                <Book book={book} key={book.id} updateBook={updateBook} />
               ))}
             </ol>
           </div>
