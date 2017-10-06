@@ -16,13 +16,17 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount(){
-     BooksAPI.getAll().then((books)=>{
-       this.setState({books});
-    })
+     this.refreshBookshelves();
   }
 
-  updateBook(book, shelf){
-    console.log('updateBook', book, shelf)
+  refreshBookshelves = () => {
+    BooksAPI.getAll().then((books)=>{
+      this.setState({books});
+   })
+  }
+
+  updateBook = (book, shelf) => {
+    BooksAPI.update(book,shelf).then(this.refreshBookshelves);
   }
 
   render() {
@@ -63,8 +67,8 @@ class BooksApp extends React.Component {
                 (
                   <div className="list-books-content">
                     <Bookshelf bookshelfTitle="Currently Reading" books={getBooks('currentlyReading')} updateBook={this.updateBook}/>
-                    {/* <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')}/>
-                    <Bookshelf bookshelfTitle="Read" books={getBooks('read')}/> */}
+                    <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')} updateBook={this.updateBook}/>
+                    <Bookshelf bookshelfTitle="Read" books={getBooks('read')} updateBook={this.updateBook}/>
                   </div>
                 ):(
                   <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]} updateBook={this.updateBook}/>
