@@ -23,6 +23,10 @@ class Search extends Component {
     BooksAPI.update(book,shelf).then(this.refreshBookshelves);
   }
 
+  renderConfirmationSuccess = () => {
+
+  }
+
   render(){
     //const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
     return (
@@ -38,7 +42,7 @@ class Search extends Component {
             {
               this.state.books ? (
                 this.state.books.map((book)=>(
-                  <Book book={book} updateBook={this.updateBook}/>)
+                  <Book book={book} key={book.id} updateBook={this.updateBook}/>)
                 )
               )
               :(<p>No results found</p>)
