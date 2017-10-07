@@ -11,11 +11,8 @@ class Search extends Component {
   search_onChange  = (e) => {
     e.preventDefault();
     const query = e.target.value;
-    BooksAPI.search(query,20)
-    .then(
-      (response) => {
-        response.error ? this.setState({books:[]}) : this.setState({books:response});
-      }
+    BooksAPI.search(query,20).then(
+      (response) => {response.error ? this.setState({books:[]}) : this.setState({books:response})}
     );
   }
 
