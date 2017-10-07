@@ -15,16 +15,19 @@ class BooksApp extends React.Component {
 
   refreshLibrary = () => {
     console.log('refresh library');
-    BooksAPI.getAll().then((booksArray)=>{
-      this.setState({myLibrary:booksArray});
-   });
+    BooksAPI.getAll().then(
+      (booksArray) => this.setState({myLibrary:booksArray})
+    );
   }
+
+  updateBook = (book, shelf) =>  BooksAPI.update(book,shelf).then(this.refreshLibrary);
+
 
   render() {
     return (
       <div className="app">
         <Route exact path='/' render={()=>(
-          <ListBooks library={this.state.myLibrary}/>
+          <ListBooks library={this.state.myLibrary} onUpdate={this.updateBook} />
         )}/>
         <Route exact path='/search' component={Search}></Route>
       </div>
