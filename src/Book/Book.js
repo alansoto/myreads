@@ -18,7 +18,7 @@ class Book extends Component {
     const smallThumbnail = book.imageLinks.smallThumbnail;
     const title = book.title;
     const authors = book.authors ? book.authors.join(', ') : '';
-    const shelf = book.shelf;
+    const shelf = book.shelf ? book.shelf :'none';
 
 
 
@@ -29,8 +29,8 @@ class Book extends Component {
           <div className="book-top">
             <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${smallThumbnail})` }}></div>
 
-              <div className="book-shelf-changer">
-                <select defaultValue={shelf} onChange={this.onChange}>
+            <div className="book-shelf-changer">
+              <select defaultValue={shelf} onChange={this.onChange}>
                   <option value="none" disabled>Move to...</option>
                   <option value="currentlyReading">Currently Reading</option>
                   <option value="wantToRead">Want to Read</option>
