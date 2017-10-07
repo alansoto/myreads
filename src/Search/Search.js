@@ -6,7 +6,7 @@ import * as BooksAPI from './../BooksAPI';
 
 class Search extends Component {
 
-  state = {}
+  state = {books:[]}
 
   search_onChange  = (e) => {
     e.preventDefault();
@@ -14,18 +14,16 @@ class Search extends Component {
     BooksAPI.search(query,20)
     .then(
       (response) => {
-        this.setState({books:response});
+        response.error ? this.setState({books:[]}) : this.setState({books:response});
       }
     );
   }
 
   updateBook = (book, shelf) => {
-    BooksAPI.update(book,shelf).then(this.refreshBookshelves);
+    BooksAPI.update(book,shelf).then(this.renderConfirmationSuccess);
   }
 
-  renderConfirmationSuccess = () => {
-
-  }
+  renderConfirmationSuccess = (e) => {alert('Book updated')}
 
   render(){
     //const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
@@ -40,7 +38,7 @@ class Search extends Component {
         <div className="search-books-results">
           <ol className="books-grid">
             {
-              this.state.books ? (
+              this.state.books.length ? (
                 this.state.books.map((book)=>(
                   <Book book={book} key={book.id} updateBook={this.updateBook}/>)
                 )
