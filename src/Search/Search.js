@@ -29,8 +29,7 @@ class Search extends Component {
           <ol className="books-grid">
             {
               searchResults.length ? (
-                searchResults.map((book)=>(<Book book={book} key={book.id} onUpdate={()=>(console.log('onUpdate search'))}/>)
-                )
+                searchResults.map((book)=>(<Book book={book} key={book.id} onUpdate={()=>(console.log('onUpdate search'))}/>))
               )
               :(<p>No results found</p>)
             }
