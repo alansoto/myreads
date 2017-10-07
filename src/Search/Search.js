@@ -1,20 +1,49 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
-//import PropTypes from 'prop-types'
+import Book from './../Book/Book';
+import * as BooksAPI from './../BooksAPI';
+
 
 class Search extends Component {
 
+  state = {}
+
+  search_onChange  = (e) => {
+    e.preventDefault();
+    const query = e.target.value;
+    BooksAPI.search(query,20)
+    .then(
+      (response) => {
+        this.setState({books:response});
+      }
+    );
+  }
+
+  updateBook = (book, shelf) => {
+    BooksAPI.update(book,shelf).then(this.refreshBookshelves);
+  }
+
   render(){
+    //const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
     return (
       <div className="search-books">
         <div className="search-books-bar">
           <Link className="close-search" to="/">Close</Link>
           <div className="search-books-input-wrapper">
-            <input type="text" placeholder="Search by title or author"/>
+            <input type="text" placeholder="Search by title or author" onChange={this.search_onChange}/>
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid"></ol>
+          <ol className="books-grid">
+            {
+              this.state.books ? (
+                this.state.books.map((book)=>(
+                  <Book book={book} updateBook={this.updateBook}/>)
+                )
+              )
+              :(<p>No results found</p>)
+            }
+          </ol>
         </div>
       </div>
     );
