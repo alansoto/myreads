@@ -6,23 +6,17 @@ import * as BooksAPI from './../BooksAPI';
 
 class Search extends Component {
 
-  state = {books:[]}
+  state = {searchResults:[]}
 
   inputSearch_onChange  = (e) => {
     const query = e.target.value;
     BooksAPI.search(query,20).then(
-      (response) => {response.error ? this.setState({books:[]}) : this.setState({books:response})}
+      (response) => {response.error ? this.setState({searchResults:[]}) : this.setState({searchResults:response})}
     );
   }
 
-  updateBook = (book, shelf) => {
-    BooksAPI.update(book,shelf).then(this.renderConfirmationSuccess);
-  }
-
-  renderConfirmationSuccess = (e) => {alert('Book updated')}
-
   render(){
-    //const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
+    const searchResults = this.state.searchResults;
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -34,9 +28,8 @@ class Search extends Component {
         <div className="search-books-results">
           <ol className="books-grid">
             {
-              this.state.books.length ? (
-                this.state.books.map((book)=>(
-                  <Book book={book} key={book.id} updateBook={this.updateBook}/>)
+              searchResults.length ? (
+                searchResults.map((book)=>(<Book book={book} key={book.id} onUpdate={()=>(console.log('onUpdate search'))}/>)
                 )
               )
               :(<p>No results found</p>)
