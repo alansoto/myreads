@@ -39,7 +39,6 @@ class Search extends Component {
       const searchResult = this.props.library.find((book)=>book.id === apiResult.id);
       return searchResult !== undefined ? searchResult : apiResult;
     });
-    console.log('searchResults',searchResults);
     this.setState({searchResults:searchResults});
   }
 
