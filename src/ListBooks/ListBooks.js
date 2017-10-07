@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types'
 import Bookshelf from './../Bookshelf/Bookshelf';
 import * as BooksAPI from './../BooksAPI';
 
@@ -7,15 +8,11 @@ import * as BooksAPI from './../BooksAPI';
 class ListBooks extends Component {
   state = {}
 
-  componentDidMount(){
-     this.refreshBookshelves();
+  static propTypes = {
+      library: PropTypes.array.isRequired
   }
 
-  refreshBookshelves = () => {
-    BooksAPI.getAll().then((books)=>{
-      this.setState({books});
-   })
-  }
+
 
   updateBook = (book, shelf) => {
     BooksAPI.update(book,shelf).then(this.refreshBookshelves);
@@ -23,7 +20,7 @@ class ListBooks extends Component {
 
   render(){
     const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
-    const filterBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
+    const filterBooks = (shelf) => (this.props.library.filter((book)=> book.shelf === shelf))
 
     return (
       <div className="list-books">
@@ -31,7 +28,7 @@ class ListBooks extends Component {
           <h1>MyReads</h1>
         </div>
         {
-          this.state.books ?
+          this.props.library.length > 0 ?
             (
               <div className="list-books-content">
                 <Bookshelf bookshelfTitle="Currently Reading" books={filterBooks('currentlyReading')} updateBook={this.updateBook}/>
