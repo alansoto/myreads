@@ -8,8 +8,7 @@ class Search extends Component {
 
   state = {books:[]}
 
-  search_onChange  = (e) => {
-    e.preventDefault();
+  inputSearch_onChange  = (e) => {
     const query = e.target.value;
     BooksAPI.search(query,20).then(
       (response) => {response.error ? this.setState({books:[]}) : this.setState({books:response})}
@@ -29,7 +28,7 @@ class Search extends Component {
         <div className="search-books-bar">
           <Link className="close-search" to="/">Close</Link>
           <div className="search-books-input-wrapper">
-            <input type="text" placeholder="Search by title or author" onChange={this.search_onChange}/>
+            <input type="text" placeholder="Search by title or author" onChange={this.inputSearch_onChange}/>
           </div>
         </div>
         <div className="search-books-results">
