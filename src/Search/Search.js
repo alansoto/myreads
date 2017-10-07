@@ -24,9 +24,23 @@ class Search extends Component {
   */
   inputSearch_onChange  = (e) => {
     const query = e.target.value;
-    BooksAPI.search(query,20).then(
-      (response) => {response.error ? this.setState({searchResults:[]}) : this.setState({searchResults:response})}
-    );
+    if(query !== ''){
+      BooksAPI.search(query,20).then(
+        (response) => {response.error ? this.setState({searchResults:[]}) : this.setSearchResults(response) }
+      );
+    } else {
+      this.setState({searchResults:[]});
+    }
+
+  }
+
+  setSearchResults = (apiResponse) => {
+    const searchResults = apiResponse.map((apiResult) => {
+      const searchResult = this.props.library.find((book)=>book.id === apiResult.id);
+      return searchResult !== undefined ? searchResult : apiResult;
+    });
+    console.log('searchResults',searchResults);
+    this.setState({searchResults:searchResults});
   }
 
   render(){
