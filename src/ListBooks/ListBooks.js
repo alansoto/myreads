@@ -24,12 +24,12 @@ class ListBooks extends Component {
           library.length > 0 ?
             (
               <div className="list-books-content">
-                <Bookshelf bookshelfTitle="Currently Reading" books={filterBooks('currentlyReading')} updateBook={onUpdate}/>
-                <Bookshelf bookshelfTitle="Want to Read" books={filterBooks('wantToRead')} updateBook={onUpdate}/>
-                <Bookshelf bookshelfTitle="Read" books={filterBooks('read')} updateBook={onUpdate}/>
+                <Bookshelf bookshelfTitle="Currently Reading" books={filterBooks('currentlyReading')} onUpdate={onUpdate}/>
+                <Bookshelf bookshelfTitle="Want to Read" books={filterBooks('wantToRead')} onUpdate={onUpdate}/>
+                <Bookshelf bookshelfTitle="Read" books={filterBooks('read')} onUpdate={onUpdate}/>
               </div>
             ):(
-              <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]} updateBook={onUpdate}/>
+              <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]} onUpdate={onUpdate}/>
             )
         }
 

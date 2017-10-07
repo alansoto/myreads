@@ -6,11 +6,11 @@ class Bookshelf extends Component {
   static propTypes = {
     bookshelfTitle: PropTypes.string,
     books: PropTypes.array,
-    updateBook: PropTypes.func.isRequired
+    onUpdate: PropTypes.func.isRequired
   }
 
   render() {
-    const {bookshelfTitle, books,updateBook} = this.props;
+    const {bookshelfTitle, books,onUpdate} = this.props;
 
     return (
       <div>
@@ -19,7 +19,7 @@ class Bookshelf extends Component {
           <div className="bookshelf-books">
             <ol className="books-grid">
               { books && books.map( (book)=>(
-                <Book book={book} key={book.id} updateBook={updateBook} />
+                <Book book={book} key={book.id} onUpdate={onUpdate} />
               ))}
             </ol>
           </div>

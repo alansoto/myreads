@@ -12,9 +12,9 @@ const testBook = {
   title:'Hamlet'
 }
 
-const updateBook = ()=>{console.log('updateBook')}
+const onUpdate = ()=>{console.log('updateBook')}
 
-const testBookComponent = <Book book={testBook} updateBook={updateBook}/>
+const testBookComponent = <Book book={testBook} onUpdate={onUpdate}/>
 
 describe('Book Component',()=>{
 

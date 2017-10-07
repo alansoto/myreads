@@ -5,8 +5,8 @@ import Bookshelf from './Bookshelf';
 
 Enzyme.configure({adapter: new Adapter()});
 
-const updateBook = ()=>{console.log('hello')}
-const testBookshelf = <Bookshelf bookshelfTitle='My title' updateBook={updateBook}/>
+const onUpdate = ()=>{console.log('hello')}
+const testBookshelf = <Bookshelf bookshelfTitle='My title' onUpdate={onUpdate}/>
 
 describe('Bookshelf component',()=>{
   it('renders without crashing', () => {
