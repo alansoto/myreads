@@ -22,7 +22,7 @@ class ListBooks extends Component {
 
   render(){
     const emptyBook= {id:'000',title:'loading...', imageLinks:{smallThumbnail:''},authors:['...']};
-    const getBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
+    const filterBooks = (shelf) => (this.state.books.filter((book)=> book.shelf === shelf))
 
     return (
       <div className="list-books">
@@ -33,9 +33,9 @@ class ListBooks extends Component {
           this.state.books ?
             (
               <div className="list-books-content">
-                <Bookshelf bookshelfTitle="Currently Reading" books={getBooks('currentlyReading')} updateBook={this.updateBook}/>
-                <Bookshelf bookshelfTitle="Want to Read" books={getBooks('wantToRead')} updateBook={this.updateBook}/>
-                <Bookshelf bookshelfTitle="Read" books={getBooks('read')} updateBook={this.updateBook}/>
+                <Bookshelf bookshelfTitle="Currently Reading" books={filterBooks('currentlyReading')} updateBook={this.updateBook}/>
+                <Bookshelf bookshelfTitle="Want to Read" books={filterBooks('wantToRead')} updateBook={this.updateBook}/>
+                <Bookshelf bookshelfTitle="Read" books={filterBooks('read')} updateBook={this.updateBook}/>
               </div>
             ):(
               <Bookshelf bookshelfTitle="Loading..." books={[emptyBook]} updateBook={this.updateBook}/>
